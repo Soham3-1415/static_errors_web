@@ -1,7 +1,7 @@
 {
   "name": "static-errors-web",
   "version": "0.1.0",
-  "description": "Static web pages for HTTP errors",
+  "description": "Static web pages for handling HTTP errors",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
