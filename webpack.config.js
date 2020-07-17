@@ -55,18 +55,10 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(ico|png|svg|jpg?g|gif|webp)$/,
-                loader: 'file-loader',
-                options: {
-                    outputPath: '.errors',
-                },
-            },
-            {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                loader: 'file-loader',
-                options: {
-                    outputPath: '.errors',
-                },
+                loader: [
+                    'file-loader',
+                ],
             }
         ]
     },
