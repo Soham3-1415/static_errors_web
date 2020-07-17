@@ -12,7 +12,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contentHash].bundle.js',
+        filename: './.errors/[name].[contentHash].bundle.js',
     },
     optimization: {
         minimizer: [
@@ -43,7 +43,7 @@ module.exports = {
             algorithm: 'gzip',
             test: /\.(js|css|html|wasm)$/,
         }),
-        new MiniCssExtractPlugin({filename: '[name].[contentHash].css'}),
+        new MiniCssExtractPlugin({filename: './.errors/[name].[contentHash].css'}),
     ],
     module: {
         rules: [
@@ -56,15 +56,17 @@ module.exports = {
             },
             {
                 test: /\.(ico|png|svg|jpg?g|gif|webp)$/,
-                use: [
-                    'file-loader',
-                ],
+                loader: 'file-loader',
+                options: {
+                    outputPath: '.errors',
+                },
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [
-                    'file-loader',
-                ],
+                loader: 'file-loader',
+                options: {
+                    outputPath: '.errors',
+                },
             }
         ]
     },
