@@ -1,0 +1,14 @@
+os: linux
+dist: focal
+
+language: node_js
+node_js: node
+
+install:
+  - npm install -g typescript
+  - npm install
+  - npm audit fix
+
+script:
+  - tsc --build src/ts/tsconfig.json
+  - ./node_modules/.bin/webpack

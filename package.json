@@ -1,0 +1,37 @@
+{
+  "name": "static-errors-web",
+  "version": "0.1.0",
+  "description": "Static web pages for HTTP errors",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soham3-1415/static_errors_web.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Soham Roy <sohamroy@sohamroy.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Soham3-1415/static_errors_web/issues"
+  },
+  "homepage": "https://github.com/Soham3-1415/static_errors_web#readme",
+  "devDependencies": {
+    "compression-webpack-plugin": "~4.0.0",
+    "clean-webpack-plugin": "~3.0.0",
+    "file-loader": "~6.0.0",
+    "css-loader": "~3.6.0",
+    "html-webpack-plugin": "~4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "~5.0.3",
+    "terser-webpack-plugin": "~3.0.7",
+    "webpack": "~4.43.0",
+    "webpack-cli": "~3.3.12",
+    "webpack-dev-server": "~3.11.0"
+  },
+  "dependencies": {}
+}
